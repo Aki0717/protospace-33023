@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     ##devise_parameter_sanitizer=デバイスのパラメーターみたいなもん
     ##permitメソッドの第一引数は処理名（sign_upとか）、第二引数は配列でキーを指定して情報の取得を許可する
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:encrypted_password, :name, :profile, :occupation, :position])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :profile, :occupation, :position])
   end
 end
